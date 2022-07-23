@@ -1,0 +1,23 @@
+{
+  "name": "typeSass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diogenesOliver/typeSass.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diogenesOliver/typeSass/issues"
+  },
+  "homepage": "https://github.com/diogenesOliver/typeSass#readme",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}

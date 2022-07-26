@@ -3,6 +3,8 @@
 
 $main-color: #e7436c
 $second-color: white
+$text-color: #3d3c3c
+$button-hover: #c22950
 
 *
     margin: 0
@@ -73,6 +75,46 @@ main
     display: flex
     flex-direction: row
     justify-content: space-around
+
+    align-items: center
+
+main .content
+    display: flex
+    flex-direction: column
+    
+    gap: 4rem
+
+.content h1
+    font-size: 3rem 
+    line-height: 4.5rem
+
+    color: $text-color
+
+.content p
+    font-size: 1.1rem
+    line-height: 2rem
+
+    color: $text-color
+
+.content button
+    border: none
+
+    height: 2.5rem
+    width: 25%
+
+    border-radius: 10px
+
+    cursor: pointer
+
+    transition: .3s
+
+    font-weight: bold
+
+    background: $main-color
+    color: $second-color
+
+.content button:hover
+    background: $button-hover
 
 @media only screen and (max-width: 1024px)
     nav

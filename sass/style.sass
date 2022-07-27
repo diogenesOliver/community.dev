@@ -134,6 +134,13 @@ section
     margin-top: 10rem
 
 .card
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+
+    align-items: center
+    text-align: center
+
     width: 30rem
 
     border-radius: 10px
@@ -142,6 +149,32 @@ section
     padding: 1rem
 
     box-shadow: 5px 5px 2.5px rgba(0, 0, 0, 0.1)
+
+.card img
+    height: 70px
+    width: 70px
+
+.card h2
+    color: $text-color 
+
+.card p
+    line-height: 1.5rem
+    color: $text-color
+
+.card button
+    border: none
+    border-radius: 40px
+
+    cursor: pointer
+
+    width: 50%
+    height: 50px
+
+    background: $main-color
+    color: $second-color
+
+    font-family: Inconsolata
+    font-size: 1.2rem
 
 /* Responsive */
 
@@ -193,3 +226,7 @@ section
 
     .card
         width: 21rem
+
+    .card button
+        height: 40px
+        width: 60%

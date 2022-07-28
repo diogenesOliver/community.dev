@@ -39,6 +39,11 @@ html
     flex-direction: column
     justify-content: space-around
 
+@mixin row-space-between()
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
 @mixin card-style-default()
     width: 30rem
 
@@ -173,28 +178,47 @@ section
     width: 50%
     height: 50px
 
-/* Card das publicações */
+/* Puclications */
 
-section:nth-child(4)
-    @include row-space-around()
+.puclications
+    width: 50%
+    height: 13rem
 
+    border-radius: 20px
+
+    margin-inline: auto
     margin-top: 10rem
 
-.card-publication
-    @include card-style-default()
-    
-.information
-    @include row-space-around()
-    
+    padding: 2rem
+
+    box-shadow: $card-box-shadow
+
+    color: $text-color
+
+.head-publication
+    @include row-space-between()
+
+    width: 100%
+
     align-items: center
 
-.user-information
-    @include row-space-around()
+    margin-bottom: 4rem
+
+.head-publication button
+    @include button-default-style()
+    
+    height: 3rem
+    width: 7rem
+
+    border-radius: 30px
+
+.infromations
+    @include row-space-between()
 
     align-items: center
+    gap: 2rem
 
     line-height: 1.5rem
-    gap: 1rem
 
 /* Responsive */
 

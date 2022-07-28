@@ -1,22 +1,25 @@
 let userPostElement = `
 
-<div class="card-publication">
+<div class="puclications">
 
-<div class="information">
+        <div class="head-publication">
 
-    <div class="user-information">
-        <img src="/assets/user.svg" alt="">
+            <div class="infromations">
 
-        <div>
-            <p>Diógenes Ribeiro</p>
-            <small>@diogenes_oliveira</small>
+                <img src="/assets/user.svg" alt="">
+                <div>
+                    <h4> Diógenes Ribeiro </h4>
+                    <small> @diogenes_oliveira </small>
+                </div>
+
+            </div>
+
+            <button> + Seguir </button>
+
         </div>
 
+        <p>  </p>
+
     </div>
-
-    <h4> + Seguir </h4>
-</div>
-
-</div>
 
 `

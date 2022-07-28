@@ -6,12 +6,17 @@ $second-color: white
 $text-color: #3d3c3c
 $button-hover: #c22950
 
+$card-box-shadow: 5px 5px 2.5px rgba(0, 0, 0, 0.1)
+
 *
     margin: 0
     padding: 0
 
 body
     font-family: Montserrat
+
+html
+    scroll-behavior: smooth
 
 @mixin button-default-style()
     cursor: pointer
@@ -33,6 +38,16 @@ body
     display: flex
     flex-direction: column
     justify-content: space-around
+
+@mixin card-style-default()
+    width: 30rem
+
+    border-radius: 10px
+
+    height: 20rem
+    padding: 1rem
+
+    box-shadow: $card-box-shadow
 
 /* Navbar */
 
@@ -135,17 +150,11 @@ section
 .card
     @include column-space-around()
 
+    @include card-style-default()
+
     align-items: center
     text-align: center
-
-    width: 30rem
-
-    border-radius: 10px
-
-    height: 20rem
-    padding: 1rem
-
-    box-shadow: 5px 5px 2.5px rgba(0, 0, 0, 0.1)
+    
 
 .card img
     height: 70px
@@ -163,6 +172,29 @@ section
 
     width: 50%
     height: 50px
+
+/* Card das publicações */
+
+section:nth-child(4)
+    @include row-space-around()
+
+    margin-top: 10rem
+
+.card-publication
+    @include card-style-default()
+    
+.information
+    @include row-space-around()
+    
+    align-items: center
+
+.user-information
+    @include row-space-around()
+
+    align-items: center
+
+    line-height: 1.5rem
+    gap: 1rem
 
 /* Responsive */
 

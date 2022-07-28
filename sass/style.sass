@@ -13,12 +13,32 @@ $button-hover: #c22950
 body
     font-family: Montserrat
 
-/* Navbar */
+@mixin button-default-style()
+    cursor: pointer
 
-nav
+    font-family: Inconsolata
+    font-size: 1.2rem
+
+    border: none
+
+    background: $main-color
+    color: $second-color
+
+@mixin row-space-around()
     display: flex
     flex-direction: row
     justify-content: space-around
+
+@mixin column-space-around()
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+
+/* Navbar */
+
+nav
+    @include row-space-around()
+
     align-items: center
 
     width: 100%
@@ -53,15 +73,6 @@ nav ul
 nav ul li
     list-style: none
 
-.sign-up
-    border: 2px solid $second-color
-
-    width: 7rem
-
-    border-radius: 50px
-
-    text-align: center
-
 nav ul li a
     text-decoration: none
     color: $second-color
@@ -72,12 +83,10 @@ nav svg
 /* Main */
 
 main
+    @include row-space-around()
+
     margin-top: 5rem
     width: 100%
-
-    display: flex
-    flex-direction: row
-    justify-content: space-around
 
     align-items: center
 
@@ -100,22 +109,14 @@ main .content
     color: $text-color
 
 .content button
-    border: none
+    @include button-default-style()
 
     height: 2.5rem
     width: 25%
 
     border-radius: 10px
 
-    cursor: pointer
-
     transition: .3s
-
-    font-family: Inconsolata
-    font-size: 1.2rem
-
-    background: $main-color
-    color: $second-color
 
 .content button:hover
     background: $button-hover
@@ -127,16 +128,12 @@ section
     width: 100%
 
 .cards-information
-    display: flex
-    flex-direction: row
-    justify-content: space-around
+    @include row-space-around()
 
     margin-top: 10rem
 
 .card
-    display: flex
-    flex-direction: column
-    justify-content: space-around
+    @include column-space-around()
 
     align-items: center
     text-align: center
@@ -154,27 +151,18 @@ section
     height: 70px
     width: 70px
 
-.card h2
-    color: $text-color 
-
+.card h2,
 .card p
     line-height: 1.5rem
     color: $text-color
 
 .card button
-    border: none
-    border-radius: 40px
+    @include button-default-style()
 
-    cursor: pointer
+    border-radius: 40px
 
     width: 50%
     height: 50px
-
-    background: $main-color
-    color: $second-color
-
-    font-family: Inconsolata
-    font-size: 1.2rem
 
 /* Responsive */
 
@@ -225,7 +213,9 @@ section
         gap: 3rem
 
     .card
-        width: 21rem
+        max-width: 19rem
+        
+        margin-inline: auto
 
     .card button
         height: 40px

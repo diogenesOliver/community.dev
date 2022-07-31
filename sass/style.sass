@@ -8,6 +8,8 @@ $button-hover: #c22950
 
 $card-box-shadow: 5px 5px 2.5px rgba(0, 0, 0, 0.1)
 
+$font-dev: Inconsolata
+
 *
     margin: 0
     padding: 0
@@ -21,7 +23,7 @@ html
 @mixin button-default-style()
     cursor: pointer
 
-    font-family: Inconsolata
+    font-family: $font-dev
     font-size: 1.2rem
 
     border: none
@@ -184,6 +186,8 @@ main img
 section
     width: 100%
 
+    margin-top: 10rem
+
 .cards-information
     @include row-space-around()
 
@@ -255,6 +259,41 @@ section
     gap: 2rem
 
     line-height: 1.5rem
+
+/* Plataform */
+
+.plataform
+    @include row-space-around()
+    
+    align-items: center
+
+    background: $main-color
+
+    height: 30rem
+
+.users,
+.community,
+.articles
+    @include column-space-around()
+    
+    color: $second-color
+
+    align-items: center
+    text-align: center
+
+    gap: 2rem
+
+.users h2,
+.community h2,
+.articles h2
+    font-size: 5rem
+
+.users h3,
+.community h3,
+.articles h3
+    font-size: 2rem
+
+    font-family: $font-dev
 
 /* Responsive */
 

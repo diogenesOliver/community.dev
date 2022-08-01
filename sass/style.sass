@@ -106,6 +106,8 @@ nav
     background: $main-color
     color: $second-color
 
+    z-index: 1
+
     position: sticky
     top: 0
 
@@ -283,15 +285,24 @@ section
 
     gap: 2rem
 
+.users span,
+.community span,
+.articles span
+    display: none
+
 .users h2,
 .community h2,
 .articles h2
     font-size: 5rem
 
+    position: absolute
+
 .users h3,
 .community h3,
 .articles h3
     font-size: 2rem
+
+    margin-top: 10rem
 
     font-family: $font-dev
 

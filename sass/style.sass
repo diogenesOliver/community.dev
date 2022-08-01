@@ -264,7 +264,7 @@ section
 
 .plataform
     @include row-space-around()
-    
+
     align-items: center
 
     background: $main-color
@@ -275,7 +275,7 @@ section
 .community,
 .articles
     @include column-space-around()
-    
+
     color: $second-color
 
     align-items: center
@@ -335,6 +335,25 @@ section
 
     main img
         display: none
+
+    .plataform
+        @include column-space-around()
+
+        height: 50rem
+
+        gap: .3rem
+
+    .users h2,
+    .community h2,
+    .articles h2
+        font-size: 3rem
+
+    .users h3,
+    .community h3,
+    .articles h3
+        font-size: 1.8rem
+
+    /* Publications */
 
     .cards-information
         flex-direction: column

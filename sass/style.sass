@@ -181,7 +181,7 @@ main img
 section
     width: 100%
 
-    margin-top: 10rem
+    margin-top: 5rem
 
 .cards-information
     @include row-space-around()
@@ -205,13 +205,15 @@ section
     line-height: 1.5rem
     color: colors.$text-color
 
-.card button
+.card a
     @include button-default-style()
 
     border-radius: 40px
 
     width: 50%
-    height: 50px
+    padding: .8rem
+
+    text-decoration: none
 
 /* Puclications */
 
@@ -296,6 +298,11 @@ section
     font-size: 2rem
 
     margin-top: 10rem
+
+    font-family: fonts.$font-dev
+
+section:nth-child(5)
+    text-align: center
 
     font-family: fonts.$font-dev
 

@@ -306,6 +306,53 @@ section:nth-child(5)
 
     font-family: fonts.$font-dev
 
+.card-community
+    @include card-style-default()
+    @include column-space-around()
+
+    padding: 2rem
+
+    text-align: left
+
+.card-community .header-card
+    line-height: 2rem
+
+    align-items: center
+
+    color: colors.$text-color
+
+    gap: 1rem
+
+.card-community .description
+    color: colors.$text-color
+
+.user-image-perfil img
+    height: 2.5rem
+
+    background: colors.$main-color
+    border-radius: 50%
+
+.tags ul
+    list-style: none
+
+    display: flex
+    flex-direction: row
+
+    gap: 1rem
+
+.tags ul li a
+    text-decoration: none
+
+    color: colors.$text-color
+
+.card-community button
+    @include button-default-style()
+
+    width: 30%
+    height: 2.5rem
+
+    border-radius: 30px
+
 /* Responsive */
 
 @media only screen and (max-width: 1024px)

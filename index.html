@@ -21,7 +21,7 @@
             <ul>
                 <li> <a href=""> Home </a></li>
                 <li> <a href=""> About </a></li>
-                <li> <a href=""> Community </a></li>
+                <li> <a href="#communityId"> Community </a></li>
                 <li> <a href=""> Services </a></li>
             </ul>
 
@@ -74,7 +74,7 @@
                     Create and participate in various communities on various subjects. Learn while having fun.
                 </p>
 
-                <a href="#communityId   "> Know more </a>
+                <a href="#communityId"> Know more </a>
             </div>
 
             <div class="card">
@@ -108,7 +108,7 @@
             <div class="users">
                 <h2 id="numbers-user"></h2>
                 <h3>Users</h3>
-            </div>   
+            </div>
             <div class="community">
                 <h2 id="numbers-community"></h2>
                 <h3>Communities</h3>
@@ -121,11 +121,53 @@
     </section>
 
     <section id="communityId">
-        <h2>Community</h2>
+        <button id="createCommunity"> + Create community</button>
+
+        <div class="cards">
+
+            <div class="card-community">
+
+                <div class="header-card">
+                    <h1>NodeJs</h1>
+                    <h4> 10.356 users </h4>
+                </div>
+
+                <div class="description">
+                    <p> Maior comunidade especializada em NodeJs. Aprenda do básico ao avançado! </p>
+                </div>
+
+                <div class="user-image-perfil">
+                    <img src="/assets/user.svg">
+                    <img src="/assets/user.svg">
+                    <img src="/assets/user.svg">
+                </div>
+
+                <div class="tags">
+
+                    <ul>
+                        <li> <a href=""> NodeJs </a> </li>
+                        <li> <a href=""> JavaScript </a> </li>
+                        <li> <a href=""> Backend </a> </li>
+                    </ul>
+
+                </div>
+
+                <button> Get started </button>
+
+            </div>
+
+        </div>
+
     </section>
 
+    <section></section>
+    
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <script src="/src/base/open-close-menu.js"></script>
+    <script src="/src/base/community-card.js"></script>
     <script src="src/index.js"></script>
+
 </body>
 
 </html>

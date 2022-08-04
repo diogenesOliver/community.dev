@@ -304,13 +304,31 @@ section
 section:nth-child(5)
     text-align: center
 
-    font-family: fonts.$font-dev
+    font-family: fonts.$main-font
+
+section button:nth-child(1)
+    @include button-default-style()
+
+    font-family: fonts.$main-font
+
+    height: 3.5rem
+
+    padding-inline: 1rem
+
+    border-radius: 1rem
+
+.cards
+    @include row-space-around()
 
 .card-community
     @include card-style-default()
     @include column-space-around()
 
-    padding: 2rem
+    height: 25rem
+
+    margin-top: 2rem
+
+    padding: 1rem
 
     text-align: left
 
@@ -343,10 +361,17 @@ section:nth-child(5)
 .tags ul li a
     text-decoration: none
 
-    color: colors.$text-color
+    padding: .5rem
+
+    border-radius: 3rem
+
+    background: colors.$bg-color-link
+    color: colors.$second-color
 
 .card-community button
     @include button-default-style()
+
+    margin-left: 70%
 
     width: 30%
     height: 2.5rem
@@ -410,6 +435,24 @@ section:nth-child(5)
     .community h3,
     .articles h3
         font-size: 1.8rem
+
+    .cards
+        @include column-space-around()
+
+    section button:nth-child(1)
+        height: 2.5rem
+
+    .card-community
+        max-width: 330px
+
+        margin-top: 2rem
+
+    .user-image-perfil img
+        height: 1.8rem
+
+    .card-community button
+        width: 45%  
+        margin-left: 55%
 
     /* Publications */
 

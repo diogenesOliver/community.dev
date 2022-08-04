@@ -1,0 +1,1 @@
+let creatingCommunity = document.getElementById('createCommunity')

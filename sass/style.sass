@@ -34,6 +34,11 @@ html
     flex-direction: column
     justify-content: space-around
 
+@mixin column-space-between()
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
 @mixin row-space-between()
     display: flex
     flex-direction: row
@@ -59,6 +64,17 @@ html
     position: absolute
 
     margin-top: 80vh
+
+@mixin input-default-style()
+    width: 100%
+
+    border: none
+
+    height: 3rem
+
+    border-radius: .3rem
+
+    text-align: center
 
 /* Menu Expanded */
 
@@ -306,6 +322,65 @@ section:nth-child(5)
 
     font-family: fonts.$main-font
 
+/* Modal community */
+
+.modal-community
+    @include column-space-around()
+
+    display: none
+
+    background: colors.$bg-modal
+
+    border-radius: .5rem
+
+    width: 50rem
+    height: 50rem
+
+    padding-inline: 2rem
+    margin-inline: auto
+
+    margin-top: -27rem
+
+.modal-community div
+    text-align: left
+
+.modal-community .head
+    @include row-space-between()
+
+    align-items: center
+
+    color: colors.$text-color
+
+.modal-community .head h3
+    font-family: fonts.$font-dev
+
+.modal-community .head svg
+    height: 2.5rem
+
+    cursor: pointer
+
+.modal-community .head svg path
+    stroke: colors.$text-color
+
+.modal-community input
+    @include input-default-style()
+
+.modal-community h4
+    line-height: 2rem
+
+.tags input
+    margin-bottom: 1rem
+
+.modal-community button
+    @include button-default-style()
+
+    height: 3rem
+    width: 70%
+
+    margin-inline: auto
+
+    border-radius: .5rem
+
 section button:nth-child(1)
     @include button-default-style()
 
@@ -317,6 +392,8 @@ section button:nth-child(1)
 
     border-radius: 1rem
 
+    z-index: -1
+
 .cards
     @include row-space-around()
 
@@ -324,9 +401,12 @@ section button:nth-child(1)
     @include card-style-default()
     @include column-space-around()
 
+    z-index: -1
+
     height: 25rem
 
     margin-top: 2rem
+    margin-inline: auto
 
     padding: 1rem
 
@@ -435,6 +515,21 @@ section button:nth-child(1)
     .community h3,
     .articles h3
         font-size: 1.8rem
+
+    .modal-community
+        max-width: 280px
+
+        margin-top: -27rem
+
+        height: 40rem
+
+    .modal-community input
+        height: 2rem
+
+    .modal-community button
+        height: 2.5rem
+
+        width: 80%
 
     .cards
         @include column-space-around()

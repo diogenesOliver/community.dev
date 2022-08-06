@@ -1,4 +1,72 @@
+@use '../variables/_colors'
+@use '../variables/_fonts'
+
+$card-box-shadow: 5px 5px 2.5px rgba(0, 0, 0, 0.1)
+
 @mixin row-space-around()
     display: flex
     flex-direction: row
     justify-content: space-around
+
+@mixin button-default-style()
+    cursor: pointer
+
+    font-family: fonts.$font-dev
+    font-size: 1.2rem
+
+    border: none
+
+    background: colors.$main-color
+    color: colors.$second-color
+
+@mixin row-space-around()
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+
+@mixin column-space-around()
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+
+@mixin column-space-between()
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+@mixin row-space-between()
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+@mixin card-style-default()
+    width: 30rem
+
+    border-radius: 10px
+
+    height: 20rem
+    padding: 1rem
+
+    box-shadow: $card-box-shadow
+
+@mixin nav-ul-responsive()
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    gap: 5rem
+
+    position: absolute
+
+    margin-top: 80vh
+
+@mixin input-default-style()
+    width: 100%
+
+    border: none
+
+    height: 3rem
+
+    border-radius: .3rem
+
+    text-align: center

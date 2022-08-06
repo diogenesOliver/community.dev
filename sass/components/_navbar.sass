@@ -1,0 +1,50 @@
+@use '../variables/_colors'
+@use '../variables/_fonts'
+
+@use '../mixins/mixins'
+
+nav
+    @include mixins.row-space-around()
+
+    align-items: center
+
+    width: 100%
+    height: 4rem
+
+    background: colors.$main-color
+    color: colors.$second-color
+
+    z-index: 1
+
+    position: sticky
+    top: 0
+
+nav div
+    display: flex
+    flex-direction: row
+
+    align-items: center
+
+    gap: 6rem
+
+nav h2
+    font-family: Inconsolata
+    cursor: pointer
+
+nav ul
+    display: flex
+    flex-direction: row
+
+    text-decoration: none
+
+    gap: 5rem
+
+nav ul li
+    list-style: none
+
+nav ul li a
+    text-decoration: none
+    color: colors.$second-color
+
+nav svg
+    display: none

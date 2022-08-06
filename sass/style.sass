@@ -1,13 +1,15 @@
 @use './variables/colors'
 @use './variables/fonts'
+@use './mixins/_mixins'
 
 @forward './components/navbar'
 @forward './components/menu-expanded'
 @forward './components/main'
 @forward './components/card-information'
 @forward './components/plataform-number'
-
-$card-box-shadow: 5px 5px 2.5px rgba(0, 0, 0, 0.1)
+@forward './components/modal-community'
+@forward './components/card-community'
+@forward './components/publications'
 
 *
     margin: 0
@@ -19,259 +21,9 @@ body
 html
     scroll-behavior: smooth
 
-@mixin button-default-style()
-    cursor: pointer
-
-    font-family: fonts.$font-dev
-    font-size: 1.2rem
-
-    border: none
-
-    background: colors.$main-color
-    color: colors.$second-color
-
-@mixin row-space-around()
-    display: flex
-    flex-direction: row
-    justify-content: space-around
-
-@mixin column-space-around()
-    display: flex
-    flex-direction: column
-    justify-content: space-around
-
-@mixin column-space-between()
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-
-@mixin row-space-between()
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-
-@mixin card-style-default()
-    width: 30rem
-
-    border-radius: 10px
-
-    height: 20rem
-    padding: 1rem
-
-    box-shadow: $card-box-shadow
-
-@mixin nav-ul-responsive()
-    display: flex
-    flex-direction: column
-    align-items: center
-
-    gap: 5rem
-
-    position: absolute
-
-    margin-top: 80vh
-
-@mixin input-default-style()
-    width: 100%
-
-    border: none
-
-    height: 3rem
-
-    border-radius: .3rem
-
-    text-align: center
-
 section
     width: 100%
     margin-top: 5rem
-
-
-/* Puclications */
-
-.puclications
-    width: 50%
-    height: 13rem
-
-    border-radius: 20px
-
-    margin-inline: auto
-    margin-top: 10rem
-
-    padding: 2rem
-
-    box-shadow: $card-box-shadow
-
-    color: colors.$text-color
-
-.head-publication
-    @include row-space-between()
-
-    width: 100%
-
-    align-items: center
-
-    margin-bottom: 4rem
-
-.head-publication button
-    @include button-default-style()
-
-    height: 3rem
-    width: 7rem
-
-    border-radius: 30px
-
-.infromations
-    @include row-space-between()
-
-    align-items: center
-    gap: 2rem
-
-    line-height: 1.5rem
-
-/* Plataform */
-
-
-/* Modal community */
-
-.modal-community
-    @include column-space-around()
-
-    display: none
-
-    background: colors.$bg-modal
-
-    border-radius: .5rem
-
-    width: 40rem
-    height: 40rem
-
-    padding-inline: 2rem
-
-    margin: auto
-
-    margin-left: 35%
-    margin-top: -10rem
-
-    position: absolute
-
-
-.modal-community div
-    text-align: left
-
-.modal-community .head
-    @include row-space-between()
-
-    align-items: center
-
-    color: colors.$text-color
-
-.modal-community .head h3
-    font-family: fonts.$font-dev
-
-.modal-community .head svg
-    height: 2.5rem
-
-    cursor: pointer
-
-.modal-community .head svg path
-    stroke: colors.$text-color
-
-.modal-community input
-    @include input-default-style()
-
-.modal-community h4
-    line-height: 2rem
-
-.tags input
-    margin-bottom: 1rem
-
-.modal-community button
-    @include button-default-style()
-
-    height: 3rem
-    width: 70%
-
-    margin-inline: auto
-
-    border-radius: .5rem
-
-section button:nth-child(1)
-    @include button-default-style()
-
-    font-family: fonts.$main-font
-
-    height: 3.5rem
-
-    padding-inline: 1rem
-
-    border-radius: 1rem
-
-    z-index: -1
-
-.cards
-    @include row-space-around()
-
-.card-community
-    @include card-style-default()
-    @include column-space-around()
-
-    z-index: -1
-
-    height: 25rem
-
-    margin-top: 2rem
-    margin-inline: auto
-
-    padding: 1rem
-
-    text-align: left
-
-.card-community .header-card
-    line-height: 2rem
-
-    align-items: center
-
-    color: colors.$text-color
-
-    gap: 1rem
-
-.card-community .description
-    color: colors.$text-color
-
-.user-image-perfil img
-    height: 2.5rem
-
-    background: colors.$main-color
-    border-radius: 50%
-
-.tags ul
-    list-style: none
-
-    display: flex
-    flex-direction: row
-
-    gap: 1rem
-
-.tags ul li a
-    text-decoration: none
-
-    padding: .5rem
-
-    border-radius: 3rem
-
-    background: colors.$bg-color-link
-    color: colors.$second-color
-
-.card-community button
-    @include button-default-style()
-
-    margin-left: 70%
-
-    width: 30%
-    height: 2.5rem
-
-    border-radius: 30px
 
 /* Responsive */
 
@@ -315,7 +67,7 @@ section button:nth-child(1)
         display: none
 
     .plataform
-        @include column-space-around()
+        @include mixins.column-space-around()
 
         height: 50rem
 
@@ -334,7 +86,7 @@ section button:nth-child(1)
     .modal-community
         max-width: 275px
 
-        padding-inline: 2rem 
+        padding-inline: 2rem
 
         margin-left: 3.5%
         height: 35rem
@@ -348,7 +100,7 @@ section button:nth-child(1)
         width: 80%
 
     .cards
-        @include column-space-around()
+        @include mixins.column-space-around()
 
     section button:nth-child(1)
         height: 2.5rem
@@ -362,7 +114,7 @@ section button:nth-child(1)
         height: 1.8rem
 
     .card-community button
-        width: 45%  
+        width: 45%
         margin-left: 55%
 
     .modal-community .head svg

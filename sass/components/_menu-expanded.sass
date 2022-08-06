@@ -1,0 +1,26 @@
+@use '../variables/_colors'
+@use '../mixins/mixins'
+
+.menu-expanded
+    height: 100%
+    width: 100%
+
+    text-align: center
+
+    overflow: hidden
+
+    background-color: colors.$main-color
+
+    transition: transform .3s
+    transform: translateY(0)
+
+body.menu-expanded .login
+    display: none
+
+body.menu-expanded nav ul
+    @include mixins.nav-ul-responsive()
+
+    margin-left: 30%
+
+body.menu-expanded> :not(nav)
+    visibility: hidden

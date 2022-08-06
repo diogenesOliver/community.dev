@@ -1,0 +1,44 @@
+@use '../variables/_colors'
+@use '../mixins/_mixins'
+
+main
+    @include mixins.row-space-around()
+
+    margin-top: 5rem
+    width: 100%
+
+    align-items: center
+
+main .content
+    display: flex
+    flex-direction: column
+
+    gap: 4rem
+
+.content h1
+    font-size: 3rem
+    line-height: 4.5rem
+
+    color: colors.$text-color
+
+.content p
+    font-size: 1.1rem
+    line-height: 2rem
+
+    color: colors.$text-color
+
+.content button
+    @include mixins.button-default-style()
+
+    height: 2.5rem
+    width: 25%
+
+    border-radius: 10px
+
+    transition: .3s
+
+.content button:hover
+    background: colors.$button-hover
+
+main img
+    height: 30rem

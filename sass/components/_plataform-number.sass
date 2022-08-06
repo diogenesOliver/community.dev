@@ -1,0 +1,50 @@
+@use '../mixins/_mixins'
+@use '../variables/_colors'
+@use '../variables/_fonts'
+
+.plataform
+    @include mixins.row-space-around()
+
+    align-items: center
+
+    background: colors.$main-color
+
+    height: 30rem
+
+.users,
+.community,
+.articles
+    @include mixins.column-space-around()
+    
+    color: colors.$second-color
+
+    align-items: center
+    text-align: center
+
+    gap: 2rem
+
+.users span,
+.community span,
+.articles span
+    display: none
+
+.users h2,
+.community h2,
+.articles h2
+    font-size: 5rem
+
+    position: absolute
+
+.users h3,
+.community h3,
+.articles h3
+    font-size: 2rem
+
+    margin-top: 10rem
+
+    font-family: fonts.$font-dev
+
+section:nth-child(6)
+    text-align: center
+
+    font-family: fonts.$main-font

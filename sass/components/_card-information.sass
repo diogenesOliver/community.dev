@@ -1,0 +1,34 @@
+@use '../mixins/_mixins'
+@use '../variables/_colors'
+
+.cards-information
+    @include mixins.row-space-around()
+
+    margin-top: 10rem
+
+.card
+    @include mixins.column-space-around()
+
+    @include mixins.card-style-default()
+
+    align-items: center
+    text-align: center
+
+.card img
+    height: 70px
+    width: 70px
+
+.card h2,
+.card p
+    line-height: 1.5rem
+    color: colors.$text-color
+
+.card a
+    @include mixins.button-default-style()
+
+    border-radius: 40px
+
+    width: 50%
+    padding: .8rem
+
+    text-decoration: none

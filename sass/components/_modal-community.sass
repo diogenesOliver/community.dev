@@ -1,0 +1,64 @@
+@use '../mixins/_mixins'
+@use '../variables/_colors'
+@use '../variables/_fonts'
+
+.modal-community
+    @include mixins.column-space-around()
+    
+    display: none
+
+    background: colors.$bg-modal
+
+    border-radius: .5rem
+
+    width: 40rem
+    height: 40rem
+
+    padding-inline: 2rem
+
+    margin: auto
+
+    margin-left: 35%
+    margin-top: -10rem
+
+    position: absolute
+
+.modal-community div
+    text-align: left
+
+.modal-community .head
+    @include mixins.row-space-between()
+
+    align-items: center
+
+    color: colors.$text-color
+
+.modal-community .head h3
+    font-family: fonts.$font-dev
+
+.modal-community .head svg
+    height: 2.5rem
+
+    cursor: pointer
+
+.modal-community .head svg path
+    stroke: colors.$text-color
+
+.modal-community input
+    @include mixins.input-default-style()
+
+.modal-community h4
+    line-height: 2rem
+
+.tags input
+    margin-bottom: 1rem
+
+.modal-community button
+    @include mixins.button-default-style()
+
+    height: 3rem
+    width: 70%
+
+    margin-inline: auto
+
+    border-radius: .5rem

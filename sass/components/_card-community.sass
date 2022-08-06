@@ -1,0 +1,80 @@
+@use '../mixins/_mixins'
+@use '../variables/_colors'
+@use '../variables/_fonts'
+
+section button:nth-child(1)
+    @include mixins.button-default-style()
+
+    font-family: fonts.$main-font
+
+    height: 3.5rem
+
+    padding-inline: 1rem
+
+    border-radius: 1rem
+
+    z-index: -1
+
+.cards
+    @include mixins.row-space-around() 
+
+.card-community
+    @include mixins.card-style-default()
+    @include mixins.column-space-around()
+
+    z-index: -1
+
+    height: 25rem
+
+    margin-top: 2rem
+    margin-inline: auto
+
+    padding: 1rem
+
+    text-align: left
+
+.card-community .header-card
+    line-height: 2rem
+
+    align-items: center
+
+    color: colors.$text-color
+
+    gap: 1rem
+
+.card-community .description
+    color: colors.$text-color
+
+.user-image-perfil img
+    height: 2.5rem
+
+    background: colors.$main-color
+    border-radius: 50%
+
+.tags ul
+    list-style: none
+
+    display: flex
+    flex-direction: row
+
+    gap: 1rem
+
+.tags ul li a
+    text-decoration: none
+
+    padding: .5rem
+
+    border-radius: 3rem
+
+    background: colors.$bg-color-link
+    color: colors.$second-color
+
+.card-community button
+    @include mixins.button-default-style()
+
+    margin-left: 70%
+
+    width: 30%
+    height: 2.5rem
+
+    border-radius: 30px

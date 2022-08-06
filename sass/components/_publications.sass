@@ -1,0 +1,44 @@
+@use '../mixins/_mixins'
+@use '../variables/_colors'
+
+$card-box-shadow: 5px 5px 2.5px rgba(0, 0, 0, 0.1)
+
+.puclications
+    width: 50%
+    height: 13rem
+
+    border-radius: 20px
+
+    margin-inline: auto
+    margin-top: 10rem
+
+    padding: 2rem
+
+    box-shadow: $card-box-shadow
+
+    color: colors.$text-color
+
+.head-publication
+    @include mixins.row-space-between()
+
+    width: 100%
+
+    align-items: center
+
+    margin-bottom: 4rem
+
+.head-publication button
+    @include mixins.button-default-style()
+
+    height: 3rem
+    width: 7rem
+
+    border-radius: 30px
+
+.infromations
+    @include mixins.row-space-between()
+
+    align-items: center
+    gap: 2rem
+
+    line-height: 1.5rem

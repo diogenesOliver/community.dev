@@ -23,7 +23,12 @@ function addNewInformations() {
     let tagTwo = document.getElementById('tag2').value
     let tagThree = document.getElementById('tag3').value
 
-    let createCommunityElement = `
+
+    if (communityTitle == '' | communityDescription == '' | tagOne == '' | tagTwo == '' | tagThree == '') {
+        alert('Preencha todos os campos')
+    } else {
+
+        let createCommunityElement = `
     <div class="card-community">
 
         <div class="header-card">
@@ -56,17 +61,20 @@ function addNewInformations() {
     </div>
 `
 
-    document.querySelector('.cards').innerHTML += createCommunityElement
+        document.querySelector('.cards').innerHTML += createCommunityElement
 
-    let objectInformation = {
-        communityTitle,
-        communityDescription,
-        tagOne,
-        tagTwo,
-        tagThree
+        let objectInformation = {
+            communityTitle,
+            communityDescription,
+            tagOne,
+            tagTwo,
+            tagThree
+        }
+
+        listOfCommunities.push(objectInformation)
+        console.log(listOfCommunities)
+
     }
-
-    listOfCommunities.push(objectInformation)
 }
 
 creatingCommunity.addEventListener('click', () => {

@@ -33,6 +33,17 @@ section button:nth-child(1)
 
     text-align: left
 
+    animation: card-animation .3s
+
+@keyframes card-animation
+  0%
+    opacity: 0
+    transform: translate3d(110px, 0, 0)
+
+  100%
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+
 .card-community .header-card
     line-height: 2rem
 

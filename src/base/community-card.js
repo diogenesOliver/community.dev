@@ -59,11 +59,14 @@ function addNewInformations() {
     document.querySelector('.cards').innerHTML += createCommunityElement
 
     let objectInformation = {
-
+        communityTitle,
+        communityDescription,
+        tagOne,
+        tagTwo,
+        tagThree
     }
 
     listOfCommunities.push(objectInformation)
-
 }
 
 creatingCommunity.addEventListener('click', () => {

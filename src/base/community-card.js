@@ -23,21 +23,26 @@ function addNewInformations() {
     let tagTwo = document.getElementById('tag2').value
     let tagThree = document.getElementById('tag3').value
 
-
-    if (communityTitle == '' | communityDescription == '' | tagOne == '' | tagTwo == '' | tagThree == '') {
+    if (!communityTitle | !communityDescription | !tagOne | !tagTwo | !tagThree) {
         alert('Preencha todos os campos')
     } else {
+        createAElement(communityTitle, communityDescription, tagOne, tagTwo, tagThree)
+        addInformationToObject(communityTitle, communityDescription, tagOne, tagTwo, tagThree)
+    }
+}
 
-        let createCommunityElement = `
+function createAElement(title, description, tagOne, tagTwo, tagThree) {
+
+    let createCommunityElement = `
     <div class="card-community">
 
         <div class="header-card">
-            <h1>${communityTitle}</h1>
+            <h1>${title}</h1>
             <h4> 10.356 users </h4>
         </div>
 
         <div class="description">
-            <p> ${communityDescription} </p>
+            <p> ${description} </p>
         </div>
 
         <div class="user-image-perfil">
@@ -61,20 +66,20 @@ function addNewInformations() {
     </div>
 `
 
-        document.querySelector('.cards').innerHTML += createCommunityElement
+    document.querySelector('.cards').innerHTML += createCommunityElement
+}
 
-        let objectInformation = {
-            communityTitle,
-            communityDescription,
-            tagOne,
-            tagTwo,
-            tagThree
-        }
-
-        listOfCommunities.push(objectInformation)
-        console.log(listOfCommunities)
-
+function addInformationToObject(title, description, tagOne, tagTwo, tagThree) {
+    let objectInformation = {
+        title,
+        description,
+        tagOne,
+        tagTwo,
+        tagThree
     }
+
+    listOfCommunities.push(objectInformation)
+    console.log(listOfCommunities)
 }
 
 creatingCommunity.addEventListener('click', () => {

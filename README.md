@@ -4,9 +4,10 @@
 
 <br>
 
-<img src='./assets/imagesREADME/all-homepage.png' style='height: 300px'>
-<img src='./assets/imagesREADME/cards-number-responsive.png' style='height: 300px'>
+<img src='./assets/imagesREADME/homepage.png' style='height: 300px'>
 <img src='./assets/imagesREADME/cards-numbers.png' style='height: 300px'>
+
+<br>
 
 <div>
     <img src='./assets/imagesREADME/communities.png' style='height: 300px'>

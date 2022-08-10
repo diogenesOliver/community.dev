@@ -44,11 +44,11 @@
 
     color: colors.$text-color
 
-.modal-community .head h3
+.modal-community .head h2
     font-family: fonts.$font-dev
 
 .modal-community .head svg
-    height: 2.5rem
+    height: 2.2rem
 
     cursor: pointer
 
@@ -57,6 +57,20 @@
 
 .modal-community input
     @include mixins.input-default-style()
+
+.modal-community textarea
+    $max-min-width-textarea: 100%
+    $max-min-height-textarea: 8rem
+
+    border: none
+
+    max-width: $max-min-width-textarea
+    min-width: $max-min-width-textarea
+
+    max-height:  $max-min-height-textarea
+    min-height:  $max-min-height-textarea
+
+    border-radius: .3rem
 
 .modal-community h4
     line-height: 2rem

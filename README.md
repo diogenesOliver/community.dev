@@ -10,10 +10,10 @@
 <br>
 
 <div>
-    <img src='./assets/imagesREADME/home-responsive.png' style='height: 340px'>
-    <img src='./assets/imagesREADME/communities.png' style='height: 340px'>
-    <img src='./assets/imagesREADME/numbers-responsive.png' style='height: 340px'>
-    <img src='./assets/imagesREADME/menu-expanded.png' style='height: 340px'>
+    <img src='./assets/imagesREADME/home-responsive-radius.png' style='height: 340px'>
+    <img src='./assets/imagesREADME/cards-rasponsive-radius.png' style='height: 340px'>
+    <img src='./assets/imagesREADME/number-responsive-radius.png' style='height: 340px'>
+    <img src='./assets/imagesREADME/expanded-radius.png' style='height: 340px'>
 </div>
 
 <br>

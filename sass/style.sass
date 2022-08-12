@@ -11,13 +11,14 @@
 @forward './components/card-community'
 @forward './components/publications'
 
+@forward './components/dark-mode'
+
 *
     margin: 0
     padding: 0
 
 body
     font-family: fonts.$main-font
-    transition: .3s
 
 html
     scroll-behavior: smooth
@@ -25,16 +26,6 @@ html
 section
     width: 100%
     margin-top: 5rem
-
-.dark-mode
-    background: colors.$bg-dark-mode
-    
-nav.dark-mode
-    background: colors.$button-hover
-
-main.dark-mode  h1,
-main.dark-mode p
-    color: colors.$text-color-dark-mode
 
 /* Responsive */
 

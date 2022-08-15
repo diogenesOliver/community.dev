@@ -6,6 +6,7 @@ let navbarDarkMode = document.querySelector('nav')
 let mainDarkMode = document.querySelector('main')
 let infoCard = document.querySelector('#infoCard')
 let plataformNumber = document.querySelector('#plataformNumber')
+let communityId = document.querySelector('#communityId')
 
 function darkMode(){
     activeLightMode.style.display = 'block'
@@ -28,6 +29,7 @@ function getColorForDarkMode(body){
     mainDarkMode.classList.add('dark-mode')
     infoCard.classList.add('dark-mode')
     plataformNumber.classList.add('dark-mode')
+    communityId.classList.add('dark-mode')
 }
 
 function removingColorFormDarkMode(body){
@@ -37,6 +39,7 @@ function removingColorFormDarkMode(body){
     mainDarkMode.classList.remove('dark-mode')
     infoCard.classList.remove('dark-mode')
     plataformNumber.classList.remove('dark-mode')
+    communityId.classList.remove('dark-mode')
 }
 
 activeDarkMode.addEventListener('click', () => {

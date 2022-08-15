@@ -64,6 +64,8 @@
 
     border: none
 
+    font-size: 1rem
+
     max-width: $max-min-width-textarea
     min-width: $max-min-width-textarea
 
@@ -71,6 +73,23 @@
     min-height:  $max-min-height-textarea
 
     border-radius: .3rem
+
+.select-tag
+    display: flex
+    gap: 6rem
+
+.select-tag select
+    font-family: fonts.$main-font
+
+    border: none
+    border-radius: .5rem
+
+    cursor: pointer
+
+    padding-inline: 2rem
+
+    width: 30%
+    height: 2rem  
 
 .modal-community h4
     line-height: 2rem
@@ -82,8 +101,8 @@
     @include mixins.button-default-style()
 
     height: 3rem
-    width: 70%
+    width: 50%
 
     margin-inline: auto
 
-    border-radius: .5rem
+    border-radius: 2rem

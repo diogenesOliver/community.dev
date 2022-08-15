@@ -125,7 +125,7 @@
 
     <div class="modal-community">
 
-        <!-- <div class="head">
+        <div class="head">
             <h2>Create community</h2>
             <svg id="closeModalCommunity" width="40" height="40" viewBox="0 0 40 40" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -148,20 +148,35 @@
 
             <h4>Add Tags</h4>
 
-            <select name="cars" id="cars">
-                <option value="volvo">JavasScript</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-            </select>
-
-            <input type="text" placeholder="Tag 1" id="tag1">
-            <input type="text" placeholder="Tag 2" id="tag2">
-            <input type="text" placeholder="Tag 3" id="tag3">
+            <div class="select-tag">
+                <select name="cars" id="tag1">
+                    <option value=""></option>
+                    <option value="Node">Node</option>
+                    <option value="Backend">Backend</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="API">API</option>
+                </select>
+    
+                <select name="cars" id="tag2">
+                    <option value=""></option>
+                    <option value="Frontend">Frontend</option>
+                    <option value="ReactJS">ReactJS</option>
+                    <option value="VueJS">VueJS</option>
+                    <option value="Angular">Angular</option>
+                </select>
+    
+                <select name="cars" id="tag3">
+                    <option value=""></option>
+                    <option value="Database">Database</option>
+                    <option value="MongoDB">MongoDB</option>
+                    <option value="NoSQL">NoSQL</option>
+                    <option value="Data">Data</option>
+                </select>
+            </div>
 
         </div>
 
-        <button id="createButton"> Create </button> -->
+        <button id="createButton"> Create </button>
 
     </div>
 

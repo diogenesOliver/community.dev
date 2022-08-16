@@ -28,6 +28,7 @@ function addNewInformations() {
     } else {
         createAElement(communityTitle, communityDescription, tagOne, tagTwo, tagThree)
         addInformationToObject(communityTitle, communityDescription, tagOne, tagTwo, tagThree)
+        closeModal()
     }
 }
 
@@ -95,5 +96,4 @@ closeModalButton.addEventListener('click', () => {
 
 createButton.addEventListener('click', () => {
     addNewInformations()
-    closeModal()
 })

@@ -136,12 +136,12 @@
 
         <div class="title">
             <h4>Title</h4>
-            <input type="text" id="communityTitle" placeholder="Title">
+            <input type="text" id="communityTitle" onfocus="this.value='';">
         </div>
 
         <div class="description">
             <h4>Description</h4>
-            <textarea name="" id="communityDescription"></textarea>
+            <textarea name="" id="communityDescription" onfocus="this.value='';"></textarea>
         </div>
 
         <div class="tags">
@@ -149,7 +149,7 @@
             <h4>Add Tags</h4>
 
             <div class="select-tag">
-                <select name="cars" id="tag1">
+                <select name="cars" id="tag1" onfocus="this.value='';">
                     <option value=""></option>
                     <option value="Node">Node</option>
                     <option value="Backend">Backend</option>
@@ -157,7 +157,7 @@
                     <option value="API">API</option>
                 </select>
     
-                <select name="cars" id="tag2">
+                <select name="cars" id="tag2" onfocus="this.value='';">
                     <option value=""></option>
                     <option value="Frontend">Frontend</option>
                     <option value="ReactJS">ReactJS</option>
@@ -165,7 +165,7 @@
                     <option value="Angular">Angular</option>
                 </select>
     
-                <select name="cars" id="tag3">
+                <select name="cars" id="tag3" onfocus="this.value='';">
                     <option value=""></option>
                     <option value="Database">Database</option>
                     <option value="MongoDB">MongoDB</option>

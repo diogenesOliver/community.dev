@@ -1,4 +1,5 @@
 @use '../variables/_colors'
+@use '../variables/_fonts'
 @use '../mixins/_mixins'
 
 main
@@ -20,6 +21,10 @@ main .content
     line-height: 4.5rem
 
     color: colors.$text-color
+
+.content h1 span
+    color: colors.$main-color
+    font-family: fonts.$font-dev
 
 .content p
     font-size: 1.1rem

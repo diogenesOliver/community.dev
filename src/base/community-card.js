@@ -73,7 +73,7 @@ function createAElement(title, description, tagOne, tagTwo, tagThree) {
     document.querySelector('.cards').innerHTML += createCommunityElement
 }
 
-function addInformationToObject(title , description, tagOne, tagTwo, tagThree) {
+function addInformationToObject(title, description, tagOne, tagTwo, tagThree) {
     let objectInformation = {
         title,
         description,
@@ -87,7 +87,13 @@ function addInformationToObject(title , description, tagOne, tagTwo, tagThree) {
 }
 
 creatingCommunity.addEventListener('click', () => {
-    openModal()
+
+    if (listOfCommunities.length >= 2) {
+        alert('Você atingiu o seu limite de comunidades criadas')
+    } else {
+        openModal()
+    }
+
 })
 
 closeModalButton.addEventListener('click', () => {

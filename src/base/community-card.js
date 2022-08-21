@@ -34,15 +34,14 @@ function addNewInformations() {
 
 function createAElement(title, description, tagOne, tagTwo, tagThree) {
 
-    let randomNumber = Math.random()
-    let usersNumber = randomNumber * 10
+    let randomNumber = (Math.random() * 10).toFixed(3)
 
     let createCommunityElement = `
     <div class="card-community">
 
         <div class="header-card">
             <h1>${title}</h1>
-            <h4> ${usersNumber.toFixed(3)} users </h4>
+            <h4> ${randomNumber} users </h4>
         </div>
 
         <div class="description">

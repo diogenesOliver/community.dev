@@ -88,11 +88,7 @@ function addInformationToObject(title, description, tagOne, tagTwo, tagThree) {
 
 creatingCommunity.addEventListener('click', () => {
 
-    if (listOfCommunities.length >= 2) {
-        alert('Você atingiu o seu limite de comunidades criadas')
-    } else {
-        openModal()
-    }
+    listOfCommunities.length >= 2 ? alert('Você atingiu o seu limite de comunidades criadas') : openModal()
 
 })
 

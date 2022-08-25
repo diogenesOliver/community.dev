@@ -19,12 +19,37 @@ section button:nth-child(2)
     line-height: 3rem
     color: colors.$text-color
 
+/* Card maintenance */
+
+.top-card-img
+    display: flex
+
+    flex-direction: column
+    align-items: center
+
+    width: 100%
+    height: 10rem
+
+    border-radius: 6px 6px 2rem 2rem
+
+    background: colors.$text-color-modal
+
+.top-card-img h2
+    margin-top: 15%
+
+    color: colors.$main-color
+
+    font-family: fonts.$font-dev
+    font-size: 2rem
+    
+/* Card maintenance */
+
 .cards
     @include mixins.row-space-around()
 
 .card-community
-    @include mixins.card-style-default()
-    @include mixins.column-space-around()
+    @include mixins.card-information-style-default()
+    //@include mixins.column-space-around()
 
     z-index: -1
 
@@ -33,7 +58,7 @@ section button:nth-child(2)
     margin-top: 2rem
     margin-inline: auto
 
-    padding: 1rem
+    padding: 0rem
 
     text-align: left
 

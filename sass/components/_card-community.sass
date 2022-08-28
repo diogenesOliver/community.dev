@@ -19,37 +19,11 @@ section button:nth-child(2)
     line-height: 3rem
     color: colors.$text-color
 
-/* Card maintenance */
-
-.top-card-img
-    display: flex
-
-    flex-direction: column
-    align-items: center
-
-    width: 100%
-    height: 10rem
-
-    border-radius: 6px 6px 2rem 2rem
-
-    background: colors.$text-color
-
-.top-card-img h2
-    margin-top: 15%
-
-    color: colors.$main-color
-
-    font-family: fonts.$font-dev
-    font-size: 2rem
-    
-/* Card maintenance */
-
 .cards
     @include mixins.row-space-around()
 
 .card-community
     @include mixins.card-information-style-default()
-    //@include mixins.column-space-around()
 
     z-index: -1
 
@@ -64,6 +38,24 @@ section button:nth-child(2)
 
     animation: card-animation .3s
 
+.card-community button
+    border: none
+
+    margin-top: 3rem
+    margin-left: 15rem
+
+    height: 2rem
+    width: 9rem
+
+    font-weight: bold
+    font-size: 1rem
+    font-family: fonts.$main-font
+
+    background: colors.$text-color
+    color: colors.$main-color
+
+    border-radius: .5rem
+
 @keyframes card-animation
     0%
         opacity: 0
@@ -73,51 +65,50 @@ section button:nth-child(2)
         opacity: 1
         transform: translate3d(0, 0, 0)
 
-.card-community .header-card
-    line-height: 2rem
+.top-card-img
+    display: flex
 
+    flex-direction: column
     align-items: center
 
+    width: 100%
+    height: 7rem
+
+    border-radius: 6px 6px 2rem 2rem
+
+    background: colors.$text-color
+
+.header-card,
+.description,
+.tags ul li a
+
     color: colors.$text-color
 
-    gap: 1rem
+.top-card-img h2
+    color: colors.$main-color
 
-.card-community .description
-    color: colors.$text-color
+    margin-top: 10%
 
-.user-image-perfil img
-    height: 1.5rem
+    font-family: fonts.$font-dev
+    font-size: 2rem
 
-    padding: .3rem
+.header-card, .description
+    margin-top: 1rem
+    margin-left: 1rem
 
-    background: colors.$main-color
-    border-radius: 50%
+.tags
+    margin-top: 2rem
 
 .tags ul
+    @include mixins.row-space-around()
+
     list-style: none
-
-    display: flex
-    flex-direction: row
-
-    gap: 1rem
 
 .tags ul li a
     text-decoration: none
 
     padding: .5rem
 
-    border-radius: 3rem
-    border: 2px solid colors.$main-color
+    border-radius: 1rem
 
     background: colors.$bg-color-link
-    color: colors.$second-color
-
-.card-community button
-    @include mixins.button-default-style()
-
-    margin-left: 70%
-
-    width: 30%
-    height: 2.5rem
-
-    border-radius: 30px

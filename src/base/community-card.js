@@ -37,36 +37,34 @@ function createAElement(title, description, tagOne, tagTwo, tagThree) {
     let randomNumber = (Math.random() * 10).toFixed(3)
 
     let createCommunityElement = `
-    <div class="card-community">
+    <div class="card-community" id="cardsId">
 
-        <div class="header-card">
-            <h1>${title}</h1>
-            <h4> ${randomNumber} users </h4>
-        </div>
+                <div class="top-card-img">
+                    <h2>Community.dev</h2>
+                </div>
 
-        <div class="description">
-            <p> ${description} </p>
-        </div>
+                <div class="header-card">
+                    <h1>${title}</h1>
+                    <small> ${randomNumber} users </small>
+                </div>
 
-        <div class="user-image-perfil">
-            <img src="/assets/user.svg">
-            <img src="/assets/user.svg">
-            <img src="/assets/user.svg">
-        </div>
+                <div class="description">
+                    <p> ${description} </p>
+                </div>
 
-        <div class="tags">
+                <div class="tags">
 
-            <ul>
-                <li> <a href=""> ${tagOne} </a> </li>
-                <li> <a href=""> ${tagTwo} </a> </li>
-                <li> <a href=""> ${tagThree} </a> </li>
-            </ul>
+                    <ul>
+                        <li> <a href=""> ${tagOne} </a> </li>
+                        <li> <a href=""> ${tagTwo} </a> </li>
+                        <li> <a href=""> ${tagThree} </a> </li>
+                    </ul>
 
-        </div>
+                </div>
 
-        <button> Get started </button>
+                <button> Get started </button>
 
-    </div>
+            </div>
 `
 
     document.querySelector('.cards').innerHTML += createCommunityElement

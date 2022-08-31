@@ -2,16 +2,30 @@ let creatingCommunity = document.getElementById('createCommunity')
 let communityModal = document.querySelector('.modal-community')
 let closeModalButton = document.getElementById('closeModalCommunity')
 
+let darkenTheScreen = document.getElementById('darkenTheScreen')
+
 let createButton = document.getElementById('createButton')
 
 let listOfCommunities = []
 
+function darkenScreenByOpenModal(addingDark){
+    addingDark.classList.add('modal-wrapper')
+}
+
+function removeDarkScreen(removeDark){
+    removeDark.classList.remove('modal-wrapper')
+}
+
 function openModal() {
     communityModal.style.display = 'flex'
+
+    darkenScreenByOpenModal(darkenTheScreen)
 }
 
 function closeModal() {
     communityModal.style.display = 'none'
+
+    removeDarkScreen(darkenTheScreen)
 }
 
 function addNewInformations() {
@@ -28,7 +42,9 @@ function addNewInformations() {
     } else {
         createAElement(communityTitle, communityDescription, tagOne, tagTwo, tagThree)
         addInformationToObject(communityTitle, communityDescription, tagOne, tagTwo, tagThree)
-        closeModal()
+        
+        setTimeout( closeModal, 1000 )
+
     }
 }
 

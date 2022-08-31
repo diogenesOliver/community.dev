@@ -2,9 +2,22 @@
 @use '../variables/_colors'
 @use '../variables/_fonts'
 
+.modal-wrapper
+    background: rgba(0, 0, 0, .5)
+
+    position: fixed
+
+    top: 0
+    left: 0
+
+    width: 100%
+    height: 100% 
+
+    z-index: 100
+
 .modal-community
     @include mixins.column-space-around()
-    
+
     display: none
 
     background: colors.$bg-modal
@@ -19,20 +32,20 @@
     margin: auto
 
     margin-left: 35%
-    margin-top: -10rem
+    margin-top: 10rem
 
     position: absolute
 
     animation: modal-animation .3s
 
 @keyframes modal-animation
-  0%
-    opacity: 0
-    transform: scale(.2)
+    0%
+        opacity: 0
+        transform: scale(.2)
 
-  100%
-    opacity: 1
-    transform: scale(1)
+    100%
+        opacity: 1
+        transform: scale(1)
 
 .modal-community div
     text-align: left
@@ -77,8 +90,8 @@
     max-width: $max-min-width-textarea
     min-width: $max-min-width-textarea
 
-    max-height:  $max-min-height-textarea
-    min-height:  $max-min-height-textarea
+    max-height: $max-min-height-textarea
+    min-height: $max-min-height-textarea
 
     border-radius: .3rem
 
@@ -97,7 +110,7 @@
     padding-inline: 2rem
 
     width: 30%
-    height: 2rem  
+    height: 2rem
 
 .modal-community h4
     line-height: 2rem
@@ -114,3 +127,21 @@
     margin-inline: auto
 
     border-radius: .5rem
+
+    transition: .5s
+
+.icon
+    opacity: 0
+
+.modal-community button:focus
+    width: 4rem
+    height: 4rem
+
+    border-radius: 50%
+
+.modal-community button:focus .text
+    opacity: 0
+
+.modal-community button:focus .icon
+    opacity: 1
+    transition-delay: .5s

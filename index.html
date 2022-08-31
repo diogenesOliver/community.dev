@@ -120,84 +120,93 @@
         </div>
     </section>
 
-    <div class="modal-community">
+    <div id="darkenTheScreen" class="">
 
-        <div class="head">
-            <h2>Create community</h2>
-            <svg id="closeModalCommunity" width="40" height="40" viewBox="0 0 40 40" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M30 10L10 30M10 10L30 30" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-            </svg>
-        </div>
+        <div class="modal-community">
 
-        <div class="title">
-            <h4>Title</h4>
-            <input type="text" id="communityTitle" onfocus="this.value='';">
-        </div>
-
-        <div class="description">
-            <h4>Description</h4>
-            <textarea name="" id="communityDescription" onfocus="this.value='';"></textarea>
-        </div>
-
-        <div class="tags">
-
-            <h4>Add Tags</h4>
-
-            <div class="select-tag">
-                <select name="cars" id="tag1" onfocus="this.value='';">
-                    <option value=""></option>
-                    <option value="Node">Node</option>
-                    <option value="Backend">Backend</option>
-                    <option value="JavaScript">JavaScript</option>
-                    <option value="API">API</option>
-                    <option value="Database">Database</option>
-                    <option value="MongoDB">MongoDB</option>
-                    <option value="NoSQL">NoSQL</option>
-                    <option value="Data">Data</option>
-                    <option value="Frontend">Frontend</option>
-                    <option value="ReactJS">ReactJS</option>
-                    <option value="VueJS">VueJS</option>
-                    <option value="Angular">Angular</option>
-                </select>
-
-                <select name="cars" id="tag2" onfocus="this.value='';">
-                    <option value=""></option>
-                    <option value="Node">Node</option>
-                    <option value="Backend">Backend</option>
-                    <option value="JavaScript">JavaScript</option>
-                    <option value="API">API</option>
-                    <option value="Database">Database</option>
-                    <option value="MongoDB">MongoDB</option>
-                    <option value="NoSQL">NoSQL</option>
-                    <option value="Data">Data</option>
-                    <option value="Frontend">Frontend</option>
-                    <option value="ReactJS">ReactJS</option>
-                    <option value="VueJS">VueJS</option>
-                    <option value="Angular">Angular</option>
-                </select>
-
-                <select name="cars" id="tag3" onfocus="this.value='';">
-                    <option value=""></option>
-                    <option value="Node">Node</option>
-                    <option value="Backend">Backend</option>
-                    <option value="JavaScript">JavaScript</option>
-                    <option value="API">API</option>
-                    <option value="Database">Database</option>
-                    <option value="MongoDB">MongoDB</option>
-                    <option value="NoSQL">NoSQL</option>
-                    <option value="Data">Data</option>
-                    <option value="Frontend">Frontend</option>
-                    <option value="ReactJS">ReactJS</option>
-                    <option value="VueJS">VueJS</option>
-                    <option value="Angular">Angular</option>
-                </select>
+            <div class="head">
+                <h2>Create community</h2>
+                <svg id="closeModalCommunity" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 10L10 30M10 10L30 30" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
             </div>
-
+    
+            <div class="title">
+                <h4>Title</h4>
+                <input type="text" id="communityTitle" onfocus="this.value='';">
+            </div>
+    
+            <div class="description">
+                <h4>Description</h4>
+                <textarea name="" id="communityDescription" onfocus="this.value='';"></textarea>
+            </div>
+    
+            <div class="tags">
+    
+                <h4>Add Tags</h4>
+    
+                <div class="select-tag">
+                    <select name="cars" id="tag1" onfocus="this.value='';">
+                        <option value=""></option>
+                        <option value="Node">Node</option>
+                        <option value="Backend">Backend</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="API">API</option>
+                        <option value="Database">Database</option>
+                        <option value="MongoDB">MongoDB</option>
+                        <option value="NoSQL">NoSQL</option>
+                        <option value="Data">Data</option>
+                        <option value="Frontend">Frontend</option>
+                        <option value="ReactJS">ReactJS</option>
+                        <option value="VueJS">VueJS</option>
+                        <option value="Angular">Angular</option>
+                    </select>
+    
+                    <select name="cars" id="tag2" onfocus="this.value='';">
+                        <option value=""></option>
+                        <option value="Node">Node</option>
+                        <option value="Backend">Backend</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="API">API</option>
+                        <option value="Database">Database</option>
+                        <option value="MongoDB">MongoDB</option>
+                        <option value="NoSQL">NoSQL</option>
+                        <option value="Data">Data</option>
+                        <option value="Frontend">Frontend</option>
+                        <option value="ReactJS">ReactJS</option>
+                        <option value="VueJS">VueJS</option>
+                        <option value="Angular">Angular</option>
+                    </select>
+    
+                    <select name="cars" id="tag3" onfocus="this.value='';">
+                        <option value=""></option>
+                        <option value="Node">Node</option>
+                        <option value="Backend">Backend</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="API">API</option>
+                        <option value="Database">Database</option>
+                        <option value="MongoDB">MongoDB</option>
+                        <option value="NoSQL">NoSQL</option>
+                        <option value="Data">Data</option>
+                        <option value="Frontend">Frontend</option>
+                        <option value="ReactJS">ReactJS</option>
+                        <option value="VueJS">VueJS</option>
+                        <option value="Angular">Angular</option>
+                    </select>
+                </div>
+    
+            </div>
+    
+            <button id="createButton">
+    
+                <span class="text">Create</span>
+                <i class="icon"></i>
+    
+            </button>
+    
         </div>
-
-        <button id="createButton"> Create </button>
 
     </div>
 

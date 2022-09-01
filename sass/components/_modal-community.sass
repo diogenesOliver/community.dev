@@ -121,6 +121,9 @@
 .modal-community button
     @include mixins.button-default-style()
 
+    display: flex
+    align-items: center
+
     height: 3rem
     width: 40%
 
@@ -130,8 +133,16 @@
 
     transition: .5s
 
+.modal-community button .text
+    margin-inline: auto
+
 .icon
     opacity: 0
+
+.icon img
+    margin-left: -3.7rem
+
+    height: 20px
 
 .modal-community button:focus
     width: 4rem

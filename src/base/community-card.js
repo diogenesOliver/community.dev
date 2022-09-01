@@ -43,7 +43,7 @@ function addNewInformations() {
         createAElement(communityTitle, communityDescription, tagOne, tagTwo, tagThree)
         addInformationToObject(communityTitle, communityDescription, tagOne, tagTwo, tagThree)
         
-        setTimeout( closeModal, 1000 )
+        setTimeout( closeModal, 2000 )
 
     }
 }

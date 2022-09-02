@@ -21,4 +21,4 @@
 
 <br>
 
-PROJECT IN PROGRESS.: <a> https://guileless-beignet-ab7910.netlify.app </a>
+PROJECT IN PROGRESS.: <a> https://communitydeveloper.netlify.app </a>
